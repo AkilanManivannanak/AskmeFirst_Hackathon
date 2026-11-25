@@ -1,0 +1,221 @@
+{
+  "persona": "Maria, healthcare consultant",
+  "request": "Make a flyer for my health workshop",
+  "upload_text": "Healthy Hearts Workshop\nCommunity Room, Flatbush Library\nThursdays 6pm\nLearn about blood pressure, nutrition and exercise. All welcome.\nRSVP: 718-555-0142",
+  "questions": [
+    {
+      "field": "audience",
+      "question": "Who do you most want to walk into this workshop?",
+      "why": "A flyer for retirees reads very differently from one for busy parents.",
+      "suggestions": [
+        "Older adults managing blood pressure",
+        "Busy parents in the neighborhood",
+        "Caregivers of aging relatives"
+      ],
+      "summary": "You want a flyer that brings older neighbors to your heart health workshop."
+    },
+    {
+      "field": "key_details",
+      "question": "What do you know from your work that a stranger writing this would miss?",
+      "why": "This is the part only you can add. It keeps the flyer from sounding generic.",
+      "suggestions": [
+        "People feel rushed at doctor visits",
+        "Many are embarrassed to ask basic questions",
+        "Free tea helps people relax and stay"
+      ]
+    },
+    {
+      "field": "purpose",
+      "question": "What should someone do after reading the flyer?",
+      "why": "One clear action makes the flyer far more effective.",
+      "suggestions": [
+        "Call to reserve a seat",
+        "Simply show up on Thursday",
+        "Bring a friend or family member"
+      ]
+    },
+    {
+      "field": "avoid",
+      "question": "Is there anything this flyer should never say or show?",
+      "why": "Clear limits keep it respectful and give you something to check it against.",
+      "suggestions": [
+        "Medical jargon",
+        "Before and after weight photos",
+        "The word free, it sounds cheap"
+      ]
+    }
+  ],
+  "voice_check": {
+    "eligible": true,
+    "words": 58,
+    "label": "Human",
+    "headline": "Human Written",
+    "fraction_human": 0.97,
+    "fraction_ai": 0.0,
+    "fraction_ai_assisted": 0.03,
+    "ai_like": false,
+    "windows": [
+      {
+        "text": "Honestly most of the folks who come are older, they get told watch your pressure and then nobody shows them how.",
+        "label": "Human Written",
+        "score": 0.02,
+        "confidence": "High"
+      },
+      {
+        "text": "I want them to feel like it's just a chat over tea, nobody judging what they ate last night.",
+        "label": "Human Written",
+        "score": 0.03,
+        "confidence": "High"
+      }
+    ]
+  },
+  "plans": [
+    {
+      "title": "Healthy Hearts Workshop Flyer",
+      "deliverable": "Flyer",
+      "best_tool": "chatgpt",
+      "tool_reason": "ChatGPT can generate the finished flyer as an image.",
+      "steps": [
+        {
+          "id": "s1",
+          "label": "Your audience defined",
+          "detail": "Older adults in Flatbush managing blood pressure.",
+          "owner": "you"
+        },
+        {
+          "id": "s2",
+          "label": "Your insight added",
+          "detail": "People feel rushed and embarrassed at appointments.",
+          "owner": "you"
+        },
+        {
+          "id": "s3",
+          "label": "AI writes the message",
+          "detail": "A calm headline and three short, plain sentences.",
+          "owner": "ai"
+        },
+        {
+          "id": "s4",
+          "label": "AI designs the layout",
+          "detail": "Large type, high contrast, date and phone number prominent.",
+          "owner": "ai"
+        },
+        {
+          "id": "s5",
+          "label": "Check against your rules",
+          "detail": "No jargon, no weight photos, no use of the word free.",
+          "owner": "ai"
+        },
+        {
+          "id": "s6",
+          "label": "You review and print",
+          "detail": "You approve the final flyer before anyone sees it.",
+          "owner": "you"
+        }
+      ],
+      "choices": [
+        {
+          "label": "Audience",
+          "value": "Older adults managing blood pressure"
+        },
+        {
+          "label": "Key details",
+          "value": "They feel rushed at doctor visits and embarrassed to ask basic questions"
+        },
+        {
+          "label": "Goal",
+          "value": "Call to reserve a seat"
+        },
+        {
+          "label": "Avoid",
+          "value": "Medical jargon, weight photos, the word free"
+        }
+      ],
+      "checks": [
+        "No medical jargon",
+        "No before and after photos",
+        "Does not use the word free",
+        "Phone number clearly visible",
+        "Readable from two meters away"
+      ],
+      "brief": "Goal\nCreate a printable flyer that invites people to the Healthy Hearts Workshop and gets them to call and reserve a seat.\n\nAudience\nOlder adults in Flatbush, Brooklyn, who are managing high blood pressure. Many feel rushed at doctor visits and are embarrassed to ask basic questions. The flyer should feel like a calm, respectful invitation, not a medical notice.\n\nKey details\n- Event: Healthy Hearts Workshop\n- Where: Community Room, Flatbush Library\n- When: Thursdays at 6pm\n- Topics: blood pressure, nutrition and exercise\n- Tea is served\n- RSVP by phone: 718-555-0142\n\nStyle\nWarm, plain and reassuring. Large, high-contrast type suitable for older readers. Simple layout with generous white space. One calm color accent.\n\nMust avoid\n- Medical jargon (for example \"hypertension\" or \"cardiovascular\")\n- Before and after or weight-loss imagery\n- The word \"free\"\n\nDeliverable format\nGenerate the finished flyer as a single portrait image (US Letter proportions). Then list the exact text used on the flyer so it can be edited.\n\nBefore you finish\nCheck the flyer against each item under \"Must avoid\" and report, item by item, whether it passes. Do not invent any facts that are not listed above. If something essential is missing, ask me one question before you start.",
+      "changes": []
+    },
+    {
+      "title": "Healthy Hearts Workshop Flyer (English and Spanish)",
+      "deliverable": "Flyer",
+      "best_tool": "chatgpt",
+      "tool_reason": "ChatGPT can generate the finished flyer as an image.",
+      "steps": [
+        {
+          "id": "s1",
+          "label": "Your audience defined",
+          "detail": "Older adults in Flatbush, English and Spanish speakers.",
+          "owner": "you"
+        },
+        {
+          "id": "s2",
+          "label": "Your insight added",
+          "detail": "People feel rushed and embarrassed at appointments.",
+          "owner": "you"
+        },
+        {
+          "id": "s3",
+          "label": "AI writes both languages",
+          "detail": "Matching English and Spanish text, side by side.",
+          "owner": "ai"
+        },
+        {
+          "id": "s4",
+          "label": "AI designs the layout",
+          "detail": "Date and time set extra large at the top.",
+          "owner": "ai"
+        },
+        {
+          "id": "s5",
+          "label": "Check against your rules",
+          "detail": "No jargon, no weight photos, no use of the word free or gratis.",
+          "owner": "ai"
+        },
+        {
+          "id": "s6",
+          "label": "You review and print",
+          "detail": "You approve the final flyer before anyone sees it.",
+          "owner": "you"
+        }
+      ],
+      "choices": [
+        {
+          "label": "Audience",
+          "value": "Older adults managing blood pressure, English and Spanish speakers"
+        },
+        {
+          "label": "Key details",
+          "value": "They feel rushed at doctor visits and embarrassed to ask basic questions"
+        },
+        {
+          "label": "Goal",
+          "value": "Call to reserve a seat"
+        },
+        {
+          "label": "Avoid",
+          "value": "Medical jargon, weight photos, the word free"
+        }
+      ],
+      "checks": [
+        "No medical jargon in either language",
+        "No before and after photos",
+        "Does not use free or gratis",
+        "Date and time largest text",
+        "Phone number clearly visible"
+      ],
+      "brief": "Goal\nCreate a printable bilingual (English and Spanish) flyer that invites people to the Healthy Hearts Workshop and gets them to call and reserve a seat.\n\nAudience\nOlder adults in Flatbush, Brooklyn, who are managing high blood pressure. Many speak Spanish as a first language. Many feel rushed at doctor visits and are embarrassed to ask basic questions. The flyer should feel like a calm, respectful invitation, not a medical notice.\n\nKey details\n- Event: Healthy Hearts Workshop / Taller Corazones Sanos\n- Where: Community Room, Flatbush Library\n- When: Thursdays at 6pm\n- Topics: blood pressure, nutrition and exercise\n- Tea is served\n- RSVP by phone: 718-555-0142\n\nStyle\nWarm, plain and reassuring. English and Spanish side by side with equal weight. Date and time set as the largest text at the top. Large, high-contrast type with generous white space.\n\nMust avoid\n- Medical jargon in either language\n- Before and after or weight-loss imagery\n- The words \"free\" or \"gratis\"\n\nDeliverable format\nGenerate the finished flyer as a single portrait image (US Letter proportions). Then list the exact English and Spanish text used so it can be edited.\n\nBefore you finish\nCheck the flyer against each item under \"Must avoid\" and report, item by item, whether it passes. Do not invent any facts that are not listed above. If something essential is missing, ask me one question before you start.",
+      "changes": [
+        "Added a Spanish version alongside English",
+        "Date and time moved to the top, set largest",
+        "Added gratis to the words to avoid"
+      ]
+    }
+  ],
+  "preview": "# Healthy Hearts Workshop\n## Taller Corazones Sanos\n\n**Thursdays at 6pm** \u00b7 Community Room, Flatbush Library\n\n## A calm hour for your heart\n- Ask the questions there was no time for at the doctor's office\n- Simple steps for blood pressure, food and movement\n- Tea is served. Come as you are.\n\n## Reserve your seat\n**Call 718-555-0142**\n\n## Layout\n- Date and time largest, at the top, in dark blue on a cream background\n- English left, Spanish right, equal size\n- One warm illustration of a teacup; no weight-loss imagery"
+}
