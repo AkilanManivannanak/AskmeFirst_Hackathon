@@ -1,0 +1,6 @@
+.env
+runs/
+__pycache__/
+*.pyc
+backend/test_flyer.pdf
+.DS_Store
