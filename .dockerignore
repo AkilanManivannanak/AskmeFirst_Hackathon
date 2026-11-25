@@ -1,0 +1,11 @@
+.git
+.github
+.ship
+.env
+.env.*
+backend/.env
+backend/runs
+backend/tests
+**/__pycache__
+.venv
+docs
