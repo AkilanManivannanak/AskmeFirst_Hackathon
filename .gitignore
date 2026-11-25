@@ -1,6 +1,24 @@
+# Secrets
 .env
-runs/
+.env.*
+!.env.example
+
+# Python
 __pycache__/
 *.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# App output
+runs/
+backend/runs/
 backend/test_flyer.pdf
+
+# Editors and OS
 .DS_Store
+.vscode/
+.idea/
+
+# Local tooling
+.ship/
