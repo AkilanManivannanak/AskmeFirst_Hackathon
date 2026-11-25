@@ -1,0 +1,22 @@
+name: check
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Byte-compile backend
+        run: python -m py_compile backend/*.py
+      - name: No real keys in .env.example
+        run: |
+          if grep -E '^[A-Z_]*API_KEY=.+' backend/.env.example; then
+            echo "A key value was committed to .env.example"; exit 1
+          fi
