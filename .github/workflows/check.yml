@@ -23,5 +23,7 @@ jobs:
           if grep -E '^[A-Z_]*API_KEY=.+' backend/.env.example; then
             echo "A key value was committed to .env.example"; exit 1
           fi
+      - name: Lint
+        run: ruff check backend
       - name: Tests (offline, no keys)
         run: python -m pytest -q

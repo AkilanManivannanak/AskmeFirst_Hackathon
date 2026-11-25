@@ -16,7 +16,7 @@ ROOT = Path(__file__).resolve().parent
 LOG = ROOT / "runs" / "live.jsonl"
 OUT = ROOT / "demo_cache.json"
 
-rows = [json.loads(l) for l in LOG.read_text().splitlines() if l.strip()]
+rows = [json.loads(line) for line in LOG.read_text().splitlines() if line.strip()]
 first_plans = [i for i, r in enumerate(rows) if r["kind"] == "plan" and not r.get("change")]
 if not first_plans:
     raise SystemExit("No plan found yet. Do one full live run to the plan screen first.")
