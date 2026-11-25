@@ -28,7 +28,6 @@ def section(name):
 def test_hermes():
     section("HERMES / AI PROVIDERS")
     from openai import OpenAI
-    import json, re
 
     tested = False
     key = os.getenv("NOUS_API_KEY")
@@ -53,7 +52,9 @@ def test_hermes():
         tested = True
     akey = os.getenv("ANTHROPIC_API_KEY")
     if akey:
-        import json as _j, re as _re, requests
+        import json as _j
+        import re as _re
+        import requests
         model = os.getenv("ANTHROPIC_MODEL", "claude-haiku-5-5")
         t = time.time()
         r = requests.post("https://api.anthropic.com/v1/messages", timeout=30,
@@ -75,7 +76,8 @@ def test_hermes():
 
 
 def _chat(client, model, label):
-    import json, re
+    import json
+    import re
     t = time.time()
     resp = client.chat.completions.create(
         model=model, temperature=0.6, max_tokens=300,
@@ -130,7 +132,7 @@ def make_test_pdf(path: Path):
     """Tiny valid PDF with flyer-like text, so the test needs no files."""
     lines = ["Free Health Workshop", "Saturday 10am, Community Center",
              "Learn to manage your blood pressure", "Bring your questions. Free tea."]
-    ops = "BT /F1 16 Tf 60 740 Td " + " ".join(f"({l}) Tj 0 -24 Td" for l in lines) + " ET"
+    ops = "BT /F1 16 Tf 60 740 Td " + " ".join(f"({ln}) Tj 0 -24 Td" for ln in lines) + " ET"
     stream = ops.encode()
     objs = [
         b"<< /Type /Catalog /Pages 2 0 R >>",

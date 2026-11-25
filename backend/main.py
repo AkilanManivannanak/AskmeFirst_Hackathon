@@ -767,7 +767,7 @@ async def voice_check(body: VoiceIn):
         ai_like = short.lower() in ("ai", "mixed") or ("ai" in headline.lower() and "human" not in headline.lower())
         wins = []
         for w in (get("windows") or [])[:12]:
-            g = (lambda k: w.get(k)) if isinstance(w, dict) else (lambda k: getattr(w, k, None))
+            g = (lambda k, w=w: w.get(k)) if isinstance(w, dict) else (lambda k, w=w: getattr(w, k, None))
             wins.append({"text": str(g("text") or ""), "label": str(g("label") or ""),
                          "score": g("ai_assistance_score"), "confidence": str(g("confidence") or "")})
         result = {"eligible": True, "words": words, "label": short, "headline": headline,
