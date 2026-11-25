@@ -12,7 +12,9 @@
 
 👩‍💻 **Akila Lourdes** & 👨‍💻 **Akilan Manivannan**
 
-📥 [**3-minute presentation**](docs/AskMeFirst.pptx) &nbsp;·&nbsp; 🎬 [Clips](#-see-it-in-motion) &nbsp;·&nbsp; 🚀 [Run it](#-run-it) &nbsp;·&nbsp; 🏁 [The hackathon](#-the-hackathon)
+📥 [**3-minute presentation**](docs/AskMeFirst.pptx) &nbsp;·&nbsp; 🎬 [Clips](#-see-it-in-motion) &nbsp;·&nbsp; 🚀 [Run it](#-run-it) &nbsp;·&nbsp; 🏁 [The hackathon](#-the-hackathon) &nbsp;·&nbsp; 🧱 [Architecture](docs/ARCHITECTURE.md)
+
+[![check](https://github.com/AkilanManivannanak/AskmeFirst_Hackathon/actions/workflows/check.yml/badge.svg)](https://github.com/AkilanManivannanak/AskmeFirst_Hackathon/actions/workflows/check.yml)
 
 </div>
 
@@ -166,6 +168,9 @@ AskmeFirst/
 
 **Never freezes.** Every model call has a time budget and a fallback chain (Hermes → backup model → built-in fallback), and the app records which model answered each step.
 
+
+Full walkthrough with diagrams: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
+
 </details>
 
 ---
@@ -187,6 +192,8 @@ uvicorn main:app --reload --port 8000
 | ☁️ Deploy a public URL | `modal deploy backend/modal_app.py` |
 | 🎥 Save your run as the demo | `python record_demo.py` |
 | 🩺 Check your keys work | `python smoke_test.py` |
+| 🐳 Run in Docker | `docker build -t askmefirst . && docker run -p 8000:8000 -e DEMO_MODE=1 askmefirst` |
+| 🧪 Run the tests (offline) | `pip install -r requirements-dev.txt && python -m pytest` |
 
 ---
 
@@ -218,7 +225,7 @@ Keys stay on the server · input limits and a rate limit · upload type and size
 - Hermes access was still being set up during the build, so a backup hosted model answered live during the demo. The app logs which model answered each step.
 - The Zheng et al. paper is a preprint.
 - Pangram's result is a reading, not a verdict, and it never blocks anyone.
-- This is a one-day hackathon build: it has smoke tests for the external services, not a full test suite.
+- This is a one-day hackathon build. Offline tests cover the interview rules, the backup plan and the server guards; the live AI quality itself is checked by hand.
 
 </details>
 
